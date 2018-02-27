@@ -7,6 +7,7 @@ The following is a collection of tools, processes and standards to help maintain
 - General
   - Best Practices
   - [Version Control](general/version_control.md)
+  - [GIT Commands](general/git_commands.md)
 - Backend
   - Javascript
   - PHP
