@@ -154,8 +154,10 @@ git add -A
 
 `git reset HEAD <arquivo.php>`
 
-	- se o resultado for: ***Unstaged changes after reset: \nM	arquivo.php*** o comando **NÃO** alterou nada.
-	- a alteração do diretório pode ser realizada através do comando: 
+
+- se o resultado for: ***Unstaged changes after reset: \nM	arquivo.php*** o comando **NÃO** alterou nada.
+- a alteração do diretório pode ser realizada através do comando: 
+
 
 `git checkout <arquivo.php>`
 
