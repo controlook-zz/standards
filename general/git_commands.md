@@ -16,7 +16,7 @@ git help <comando>
 ```
 
 
-# CONFIGURAÇÃO:
+## CONFIGURAÇÃO:
 
 - As configurações do GIT são armazenadas no arquivo **.gitconfig** localizado dentro do diretório do usuário do SO.
 - As configurações abaixo serão armazenadas dentro do arquivo citado acima.
@@ -42,15 +42,15 @@ git help <comando>
 
 
 
-# IGNORAR ARQUIVOS:
+## IGNORAR ARQUIVOS:
 
-- Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivos .gitignore não serão adicionados em um repositório. Existem dois arquivos **.gitignore**, são eles:
+Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivos .gitignore não serão adicionados em um repositório. Existem dois arquivos **.gitignore**, são eles:
 
 - **Geral**: Normalmente armazenado no diretório do usuário do Sistema Operacional. O arquivo que possui a lista dos arquivos/diretórios a serem ignorados por todos os repositórios deverá ser declarado conforme citado acima. O arquivo não precisa ter o nome de .gitignore.
 - **Por respositório**: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
 
 
-# REPOSITÓRIO LOCAL:
+## REPOSITÓRIO LOCAL:
 
 ### criar novo repositório local
 `git init`
@@ -58,7 +58,7 @@ git help <comando>
 ### verificar estado dos arquivos/diretórios
 `git status`
 
-# ADICIONAR ARQUIVOS/DIRETÓRIOS [**staged area**]
+## ADICIONAR ARQUIVOS/DIRETÓRIOS [staged area]
 
 ### adicionar um arquivo específico
 `git add arquivo.php`
@@ -68,15 +68,15 @@ git help <comando>
 
 ### adicionar todos os arquivos e diretórios 
 ```
-git add .`
-git add -A`
+git add .
+git add -A
 ```
 
 ### adicionar um arquivo que está listado no .gitignore (geral ou do repositório)
 `git add -f arquivo_no_gitignore.php`
 
 
-# COMITTAR ARQUIVO/DIRETÓRIO:
+## COMITTAR ARQUIVO/DIRETÓRIO:
 
 ### commitar um arquivo
 `git commit arquivo.php`
@@ -88,7 +88,7 @@ git add -A`
 `git commit arquivo.php -m "Mensagem de detalhamento"`
 
 
-# REMOVENDO ARQUIVO/DIRETÓRIO:
+## REMOVENDO ARQUIVO/DIRETÓRIO:
 
 ### remover arquivo
 `git rm <arquivo.php>`
@@ -97,7 +97,7 @@ git add -A`
 `git rm -r <diretório>`
 
 
-# VISUALIZAR HISTÓRICO:
+## VISUALIZAR HISTÓRICO:
 
 ### exibir histórico
 `git log`
@@ -114,10 +114,10 @@ git add -A`
 ### exibir histórico com formatação específica (hash abreviada, autor, data e comentário)
 `git log --pretty=format:"%h - %an, %ar : %s"`
 
--	**%h**		abreviação do hash
--	**%an**		nome do autor
--	**%ar**		data
--	**%s**		comentário
+-	**%h**	=	abreviação do hash
+-	**%an**	=	nome do autor
+-	**%ar**	=	data
+-	**%s**	=	comentário
 
 ### exibir o histórico de um arquivo específico
 `git log -- <caminho_do_arquivo>`
@@ -128,11 +128,11 @@ git add -A`
 ### exibir histórico de modificação de um arquivo
 `git log --diff-filter=M -- <caminho_do_arquivo>`
 
--	**A**		adicionado
--	**C**		copiado
--	**D**		apagado
--	**M**		modificado
--	**R**		renomeado
+-	**A**	=	adicionado
+-	**C**	=	copiado
+-	**D**	=	apagado
+-	**M**	=	modificado
+-	**R**	=	renomeado
 
 ### exibir o histórico de um determinado autor
 `git log --author=usuario`
@@ -142,22 +142,26 @@ git add -A`
 
 
 
-# DESFAZENDO OPERAÇÕES:
+## DESFAZENDO OPERAÇÕES:
 
 ### desfazendo alteração local (working directory)
-**-->>** esse comando deve ser utilizado enquanto o arquivo não foi adicionado na *staged area*
+**-->>** Esse comando deve ser utilizado enquanto o arquivo não foi adicionado na **staged area**
+
 `git checkout -- <arquivo.php>`
 
 ### desfazendo alteração local (staging area)
-**-->>** esse comando deve ser utilizado enquanto o arquivo já foi adicionado no *staged area*
+**-->>** Esse comando deve ser utilizado enquanto o arquivo já foi adicionado no *staged area*
+
 `git reset HEAD <arquivo.php>`
 
-	- se o resultado for: `Unstaged changes after reset: \nM	arquivo.php` o comando **NÃO** alterou nada.
-	- a alteração do diretório pode ser realizada através do comando: `git checkout <arquivo.php>`
+	- se o resultado for: ***Unstaged changes after reset: \nM	arquivo.php*** o comando **NÃO** alterou nada.
+	- a alteração do diretório pode ser realizada através do comando: 
+
+`git checkout <arquivo.php>`
 
 
 
-# REPOSITÓRIO REMOTO:
+## REPOSITÓRIO REMOTO:
 
 ### exibir repositórios remotos
 ```
@@ -182,14 +186,16 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 ### enviar arquivos/diretórios para o repositório remoto
 **-->>** o primeiro push de um repositório deve conter o nome do repositório remoto e a branch
+
 `git push -u origin master`
 
 **-->>** os demais *pushes* não precisam dessa informação
+
 `git push`
 
 
 
-# ATUALIZAR REPOSITÓRIO LOCAL DE ACORDO COM O REPOSITÓRIO REMOTO:
+## ATUALIZAR REPOSITÓRIO LOCAL DE ACORDO COM O REPOSITÓRIO REMOTO:
 
 ### atualizar os arquivos na branch atual
 `git pull`
@@ -202,7 +208,7 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 
 
-# TAGS:
+## TAGS:
 
 ### criando uma tag leve
 `git tag vs-1.1`
@@ -212,6 +218,7 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 ### criando uma tag assinada
 **-->>** para criar uma tag assinada é necessário uma chave privada (GNU Privacy Guard - GPG)
+
 `git tag -s vs-1.1 -m "Minha tag assinada 1.1"`
 
 ### criando uma tag a partir de um commit (hash)
@@ -225,7 +232,7 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 
 
-# BRANCHES:
+## BRANCHES:
 
 - O **master** é o branch principal do GIT.
 - O **HEAD** é um ponteiro especial que indica qual é a branch atual. Por padrão, o **HEAD** aponta para o branch principal, o **master**.
@@ -235,6 +242,7 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 ### trocando para uma branch existente
 `git checkout <nome_da_branch>`
+
 **-->>** nesse caso, o ponteiro principal **HEAD** está apontando para a branch <nome_da_branch>
 
 ### criar uma nova branch e trocar
@@ -277,14 +285,16 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 
 
-# REBASING:
+## REBASING:
 
 - Para alternar entre um branch e outro é necessário fazer o commit das alterações atuais para depois trocar para um outro branch. Se existir a necessidade de ralizar a troca sem fazer o commit é possível criar um **stash**. O Stash serve como se fosse um branch temporário que contém apenas as alterações ainda não commitadas.
 
 
 ### fazendo o rebase entre um branch e o master
-`git checkout <experiment>`
-`git rebase master`
+```
+git checkout <experiment>
+git rebase master
+```
 
 ### criar um stash 
 `git stash`
@@ -303,9 +313,9 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 
 
-# REESCREVENDO O HISTÓRICO:
+## REESCREVENDO O HISTÓRICO:
 
-## **Atenção!** 
+### Atenção! 
 - É possível alterar a ordem dos commits ou remover um commit apenas mudando as linhas ou removendo.
 
 ### alterando as mensagens de commit 
@@ -331,20 +341,22 @@ exemplo:
 ```
 
 **-->>** 3- Digite o comando para alterar a mensagem do commit que foi marcado como **edit**
+
 `git commit --amend -m "Nova mensagem"`
 
 **-->>** 4- Aplique a alteração
+
 `git rebase --continue`
 
 
-### juntando vários commits (mesmos passos acima, porém marcando os commits que devem ser juntados com *squash
+**-->>** juntando vários commits (mesmos passos acima, porém marcando os commits que devem ser juntados com *squash
 
 ### remover todo histórico de um arquivo
 `git filter-branch --tree-filter 'rm -f arquivo.txt' HEAD`
 
 
 
-# BISECT:
+## BISECT:
 
 - O **bisect** (pesquisa binária) é útil para encontrar um commit que está gerando um bug ou uma insconsistência entre uma sequência de commits.
 
