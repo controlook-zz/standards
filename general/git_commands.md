@@ -149,13 +149,19 @@ git add -A
 
 `git checkout -- <arquivo.php>`
 
+### resetando o último commit 
+`git reset --soft HEAD~1`
+
+agora pode "resetar" o arquivo que não quer commitar, depois é só commitar novamente
+`git reset <arquivo.php>`
+
 ### desfazendo alteração local (staging area)
 **-->>** Esse comando deve ser utilizado enquanto o arquivo já foi adicionado no *staged area*
 
 `git reset HEAD <arquivo.php>`
 
 
-- se o resultado for: ***Unstaged changes after reset: \nM	arquivo.php*** o comando **NÃO** alterou nada.
+- se o resultado for: ***Unstaged changes after reset: 	arquivo.php*** o comando **NÃO** alterou nada.
 - a alteração do diretório pode ser realizada através do comando: 
 
 
@@ -275,6 +281,12 @@ git remote add origin https://github.com/usuário/repositorio.git
 
 ### criando um branch remoto com o mesmo nome
 `git push origin <nome_branch>`
+
+### deletando um branch específico
+`git branch -D <nome_da_branch>`
+
+### criando uma branch a partir de outra
+`git checkout -b <branch_criada> <branch_espelho>`
 
 ### criando um branch remoto com nome diferente
 `git push origin <nome_local>:<nova_branch>`
