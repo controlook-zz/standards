@@ -9,8 +9,8 @@ The following is a collection of tools, processes and standards to help maintain
   - [Version Control](general/version_control.md)
   - [GIT Commands](general/git_commands.md)
 - Backend
-  - Javascript
-  - PHP
+  - [PHP](backend/php.md)
   - Python
   - REST API Guidelines
 - Frontend
+  - Javascript
