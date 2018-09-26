@@ -15,8 +15,8 @@ http://api.controlook.com/users /*This is much better version*/
 
 - Use hyphens (-) instead of underscores ( _ ) to improve the readability of URIs.
 - Use lowercase letters in URIs.
-- Do not use file extenstions. Use the `Content-Type` header to determine how to process the body’s content.
-- Never use CRUD function names in URIs.
+- Use the `Content-Type` header to determine how to process the body’s content. **Never use file extenstions.**
+- HTTP request methods should be used to indicate which CRUD function is performed. **Never use CRUD function names in URIs.**
 
 ```
 HTTP GET    http://api.controlook.com/users      /*Get all users*/
