@@ -16,7 +16,7 @@ The following is a collection of tools, processes and standards to help maintain
   - [GIT Commands](general/git_commands.md)
 - Backend
   - [PHP](backend/php.md)
-  - Python
+  - [Python](backend/python.md)
   - [REST API Guidelines](backend/rest-api-guidelines.md)
 - Frontend
   - Javascript
