@@ -8,4 +8,4 @@ All code written in PHP must follow the recommendations of [PSR-1: Basic Coding 
 
 ### .editorconfig
 
-Our projects use the [.editorconfig](.editorconfig) file. [EditorConfig](https://editorconfig.org/) helps developers define and maintain consistent coding styles between different editors and IDEs.
+Our projects use the [.editorconfig](https://github.com/controlook/standards/blob/master/files/.editorconfig) file. [EditorConfig](https://editorconfig.org/) helps developers define and maintain consistent coding styles between different editors and IDEs.
